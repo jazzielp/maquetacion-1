@@ -83,7 +83,7 @@ body {
     line-height: 40px;
     float: left;
     border-right: 1px solid gray;
-     transition: all 300ms;
+    transition: background-color 300ms, box-shadow 300ms;
 }
 
 .nav_link {
@@ -103,3 +103,23 @@ body {
     box-shadow: 0px 0px 4px gray inset;
 }
 
+.nav_list--popover{
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+.nav_item:hover .nav_list--popover {
+    display: block;
+}
+
+.nav_item:hover .nav_list--popover > li {
+    transition: background-color 300ms;
+}
+
+.nav_item:hover .nav_list--popover > li:hover {
+    background-color: #70b231;
+}
